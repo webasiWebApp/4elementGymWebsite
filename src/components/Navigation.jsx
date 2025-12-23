@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from '../redux/themeSlice';
 import PrimaryButton from './PrimaryButton';
@@ -7,6 +8,7 @@ const Navigation = () => {
     const dispatch = useDispatch();
     const mode = useSelector((state) => state.theme.mode);
     const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -32,6 +34,11 @@ const Navigation = () => {
         ? (isDarkMode ? 'backdrop-blur-md bg-black/50 border-b border-white/10' : 'backdrop-blur-md bg-white/50 border-b border-black/10')
         : (isDarkMode ? 'backdrop-blur-sm bg-black/30' : 'backdrop-blur-sm bg-white/30');
 
+    const getLinkClass = (path) => {
+        const isActive = location.pathname === path;
+        return `hover:text-[#e2b53e] transition-colors relative ${isActive ? 'text-[#e2b53e] after:content-[""] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-[#e2b53e]' : ''}`;
+    };
+
     return (
         <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 py-2 sm:py-4 ${glassBg}`}>
             <div className="container mx-auto px-4 flex justify-between items-center">
@@ -42,10 +49,10 @@ const Navigation = () => {
 
                 {/* Links Section - Hidden on mobile, Flex on md+ */}
                 <div className={`hidden md:flex items-center gap-8 font-body font-medium ${textColor}`}>
-                    <a href="#" className="hover:text-[#e2b53e] transition-colors">Home</a>
-                    <a href="#" className="hover:text-[#e2b53e] transition-colors">Train With Justin</a>
-                    <a href="#" className="hover:text-[#e2b53e] transition-colors">4 Elements Gym</a>
-                    <a href="#" className="hover:text-[#e2b53e] transition-colors">Contact / Join</a>
+                    <Link to="/" className={getLinkClass('/')}>Home</Link>
+                    <Link to="/train-with-justin" className={getLinkClass('/train-with-justin')}>Train With Justin</Link>
+                    <Link to="/gym" className={getLinkClass('/gym')}>4 Elements Gym</Link>
+                    <Link to="/contact" className={getLinkClass('/contact')}>Contact / Join</Link>
                 </div>
 
                 {/* Right Section: Theme Toggle & CTA */}

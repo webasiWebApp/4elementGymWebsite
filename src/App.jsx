@@ -1,14 +1,10 @@
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import Navigation from './components/Navigation'
-import Hero from './components/section/Hero'
-import About from './components/section/About'
-import Philosophy from './components/section/Philosophy'
-import TrainWithUs from './components/section/TrainWithUs'
-import CTA from './components/section/CTA'
-import Footer from './components/section/Footer'
+import Home from './pages/Home'
+import TrainWithJustin from './pages/TrainWithJustin'
 import './App.css'
 
 function App() {
@@ -17,6 +13,7 @@ function App() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
+      once: true, // Animation happens only once
     })
   }, [])
 
@@ -29,17 +26,14 @@ function App() {
   }, [mode])
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-start transition-colors duration-300 bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
-      <Navigation />
-
-      <Hero />
-      <About />
-      <Philosophy />
-      <TrainWithUs />
-      <CTA />
-      <Footer />
-
-    </div>
+    <Router>
+      <div className="min-h-screen w-full flex flex-col items-center justify-start transition-colors duration-300 bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/train-with-justin" element={<TrainWithJustin />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
