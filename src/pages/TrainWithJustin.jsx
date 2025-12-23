@@ -4,6 +4,9 @@ import Footer from '../components/section/Footer';
 import PrimaryButton from '../components/PrimaryButton';
 import SecondaryButton from '../components/SecondaryButton';
 import PersonalTrainingPricing from '../components/section/PersonalTrainingPricing';
+import SemiPrivateTraining from '../components/section/SemiPrivateTraining';
+import PunchInThePark from '../components/section/PunchInThePark';
+import CorporateEvents from '../components/section/CorporateEvents';
 import AOS from 'aos';
 
 const TrainWithJustin = () => {
@@ -36,7 +39,7 @@ const TrainWithJustin = () => {
                             <PrimaryButton color="#e2b53e" text="View Training Options" />
                             <SecondaryButton
                                 text="Learn More About Justin"
-                                className="bg-transparent border-[#333] text-white hover:bg-[#333] hover:border-white before:bg-white/20 !px-6"
+                                className="bg-transparent border-[#333] text-white hover:bg-[#333]  before:bg-white/20 !px-6"
                             />
                         </div>
 
@@ -63,6 +66,9 @@ const TrainWithJustin = () => {
             </section>
 
             <PersonalTrainingPricing />
+            <SemiPrivateTraining />
+            <PunchInThePark />
+            <CorporateEvents />
 
             <Footer />
         </div>
