@@ -1,10 +1,12 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Home from './pages/Home'
 import TrainWithJustin from './pages/TrainWithJustin'
+import FourElementsGym from './pages/FourElementsGym'
+import Contact from './pages/Contact'
 import './App.css'
 
 function App() {
@@ -31,6 +33,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/train-with-justin" element={<TrainWithJustin />} />
+          <Route path="/gym" element={<FourElementsGym />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>
