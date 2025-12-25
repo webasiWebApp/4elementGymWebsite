@@ -13,8 +13,8 @@ const Philosophy = () => {
                     </div>
 
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight uppercase">
-                        <span className="block mb-2">Discipline Over</span>
-                        <span className="text-[#e2b53e]">Motivation.</span>
+                        <span className="block mb-2">Everything we build starts from the </span>
+                        <span className="text-[#e2b53e]">ground up</span>
                     </h2>
                 </div>
 

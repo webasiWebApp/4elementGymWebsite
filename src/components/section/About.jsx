@@ -18,14 +18,17 @@ const About = () => {
                     </h2>
 
                     <p className="text-gray-300 font-body text-lg leading-relaxed mb-8">
-                        We are a disciplined, welcoming community focused on developing the whole human. Whether you're a seasoned fighter or putting on gloves for the first time, our space is designed to challenge you physically and ground you mentally.
+                        Welcome to 4 Elements Boxing & Fitness—an upcoming studio dedicated to adults and youth, built on four core pillars: Physical, Social, Emotional, and Mental development.
+                        As we gear up for our permanent location, we're already building community through personal training, semi-private sessions, and weekly pop-up boxing classes.
+
                     </p>
 
                     <ul className="space-y-4">
                         {[
-                            "Inclusive Environment",
-                            "Expert Coaching",
-                            "Character Building for Youth"
+                            "Inclusive environment for all ages and levels",
+                            "Structured, intentional coaching",
+                            "Personal growth for youth and adults",
+                            "Community-driven culture"
                         ].map((item, index) => (
                             <li key={index} className="flex items-center gap-3 text-white font-heading font-medium text-lg">
                                 <span className="flex-shrink-0 w-6 h-6 rounded-full border-2 border-[#e2b53e] flex items-center justify-center text-[#e2b53e]">

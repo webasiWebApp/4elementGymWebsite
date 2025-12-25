@@ -11,10 +11,9 @@ const Footer = () => {
                     {/* Brand Column */}
                     <div className="flex flex-col gap-6">
                         <div className="flex items-center gap-3 mb-2">
-                            <div className="w-10 h-10 bg-[#e2b53e] rounded-full flex items-center justify-center text-black font-bold">
-                                <img src="/logo.png" alt="Logo" className="w-6 h-6 object-contain" />
-                            </div>
-                            <span className="font-heading font-bold text-xl">4 Elements</span>
+                            
+                                <img src="/logo.png" alt="Logo" className=" h-12 object-contain" />
+                           
                         </div>
                         <div className="text-gray-400 font-body text-sm leading-relaxed">
                             <p>123 Fitness Blvd</p>
@@ -67,7 +66,7 @@ const Footer = () => {
 
                 {/* Bottom Bar */}
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-body">
-                    <p>&copy; 2024 4 Elements Boxing & Fitness. All rights reserved.</p>
+                    <p>&copy; 2026 4 Elements Boxing & Fitness. All rights reserved.</p>
 
                     <div className="flex items-center gap-8">
                         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

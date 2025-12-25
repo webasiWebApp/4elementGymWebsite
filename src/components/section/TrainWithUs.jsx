@@ -74,7 +74,7 @@ const TrainWithUs = () => {
                                 <div className="mt-auto">
                                     <SecondaryButton
                                         text={card.btnText}
-                                        className="w-full bg-[#1a1a1a] border-[#333] text-white hover:bg-[#333] hover:border-[#e2b53e] before:bg-[#e2b53e] !px-2"
+                                         className="w-[90%] bg-transparent border-white/30 text-white hover:bg-white/10 before:bg-white/20 !border-white/30"
                                     />
                                 </div>
                             </div>
