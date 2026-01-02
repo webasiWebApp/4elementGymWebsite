@@ -49,7 +49,7 @@ const Navigation = () => {
 
                 {/* Links Section - Hidden on mobile, Flex on md+ */}
                 <div className={`hidden md:flex items-center gap-8 font-body font-medium ${textColor}`}>
-                    <Link to="/coming-soon" className={getLinkClass('/')}>Home</Link>
+                    <Link to="/coming-soon" className={getLinkClass('/coming-soon')}>Home</Link>
                     <Link to="/train-with-justin" className={getLinkClass('/train-with-justin')}>Train With Justin</Link>
                     <Link to="/gym" className={getLinkClass('/gym')}>4 Elements Gym</Link>
                     <Link to="/contact" className={getLinkClass('/contact')}>Contact / Join</Link>
