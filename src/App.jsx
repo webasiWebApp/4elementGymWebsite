@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import TrainWithJustin from './pages/TrainWithJustin'
 import FourElementsGym from './pages/FourElementsGym'
 import Contact from './pages/Contact'
+import ComingSoon from './pages/ComingSoon'
 import './App.css'
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/train-with-justin" element={<TrainWithJustin />} />
           <Route path="/gym" element={<FourElementsGym />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/coming-soon" element={<ComingSoon />} />
         </Routes>
       </div>
     </Router>
