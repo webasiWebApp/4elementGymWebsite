@@ -30,7 +30,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen w-full flex flex-col items-center justify-start transition-colors duration-300 bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+      <div className="min-h-screen w-full flex flex-col items-center justify-start transition-colors duration-300 bg-white dark:bg-black text-gray-900 dark:text-white">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/train-with-justin" element={<TrainWithJustin />} />
